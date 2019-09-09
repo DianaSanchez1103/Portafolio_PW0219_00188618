@@ -1,0 +1,27 @@
+@mixin set-dimensions($width, $height){
+    width: $width;
+    height: $height;
+}
+
+    $color-primary: plum;   
+    $color-secundary: skyblue; 
+    $color-tertiary: lightseagreen;
+    $color-white: white;
+    $color-dark: black;
+    
+body {
+    @include set-dimensions(auto,100vh);
+
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 1em 5%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}

@@ -1,0 +1,31 @@
+
+
+nav {
+
+    @include set-dimensions(100%,auto);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+.btn {
+    color: white;
+    margin: 0.5em;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 1px black;
+}
+
+.purple {
+    background: $color-primary;
+}
+
+.blue {
+    background: $color-secundary;
+
+}
+
+.green {
+    background: $color-tertiary;
+    
+}

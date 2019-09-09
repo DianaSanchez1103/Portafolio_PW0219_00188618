@@ -1,0 +1,46 @@
+main {
+    @include set-dimensions(50%,auto);
+    display: flex;
+    flex-direction:column;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    >img{
+        @include set-dimensions(50%,auto);
+ 
+    margin: 1em;
+    background: rgba($color-white,0.5);
+    border-radius: 5px;
+    }
+
+    hr{
+        @include set-dimensions(75%,auto);
+        width: 75%;
+        background: $color-white;
+        height: 7px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .logos { 
+        @include set-dimensions(100%,auto);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        >img {
+            @include set-dimensions(5em,5em);
+            object-fit: cover;
+            margin: 0.5em;
+            background: $color-white;
+            border: 1px solid $color-dark;
+            border-radius: 100%;
+            opacity: 0.7;
+
+            &:hover {
+                opacity:1;
+            }
+        }
+    }
+}
