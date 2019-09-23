@@ -1,0 +1,1 @@
+while(bandera==true){for(i=0;i<palabra.length;i++){if(i<=((palabra.length))/2){if(palabra[i]==palabra[(palabra.length)-i]){bandera=true;}else{console.log("La palabra no es palindrome");bandera==false;}}}}if(bandera==true){console.log("La palabra es palindrome");}
