@@ -49,8 +49,6 @@ function addRow(carnet,schedule,late,tbody){
         var trToDelete = document.querySelector(`button[value='${idElement}']`).parentElement.parentElement;
         var elementoCarnet= Confirmacion.value;
         var elementoOriginal = querySelector(`button[value='${idElement}']`).parentElement.parentElement.childNodes[1].innerText;
-        tbody.removeChild(trToDelete);
-        tbody.removeChild();
 
         if(elementoCarnet==elementoOriginal){
             tbody.removeChild(trToDelete);
