@@ -47,18 +47,21 @@ function addRow(carnet,schedule,late,tbody){
     deleteButton.addEventListener("click", event =>{
         var idElement = event.srcElement.value;
         var trToDelete = document.querySelector(`button[value='${idElement}']`).parentElement.parentElement;
+        var elementoCarnet= Confirmacion.value;
+        var elementoOriginal = querySelector(`button[value='${idElement}']`).parentElement.parentElement.childNodes[1].innerText;
         tbody.removeChild(trToDelete);
         tbody.removeChild();
-        var elementoCarnet= Confirmacion.value;
 
-        rows.forEach((item,index) => {
+        if(elementoCarnet==elementoOriginal){
+            tbody.removeChild(trToDelete);
+            rows.forEach((item,index)=>{
             if(item.id==idElement){
-                if(item.carnet==elementoCarnet){
                 rows.splice(index,1);
-                }
             }
-        });
-        
+        });     
+        } else{
+            alert("Carnet no coincide");
+        }
     });
 
     cellContainer.appendChild(deleteButton);
